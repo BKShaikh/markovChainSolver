@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newpackage.FXMLDocumentController">
+    <children>
+      <HBox alignment="CENTER" layoutX="-2.0" prefHeight="441.0" prefWidth="461.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="14.0" layoutY="14.0">
+               <children>
+                  <Label fx:id="label" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="148.0" text="ENTER MATRIX" />
+                  <GridPane fx:id="gridPane" layoutX="14.0" layoutY="33.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label layoutX="14.0" layoutY="99.0" prefHeight="17.0" prefWidth="148.0" text="SOLUTION MATRIX" />
+                  <GridPane fx:id="solution" layoutX="14.0" layoutY="116.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <Label layoutX="14.0" layoutY="192.0" prefHeight="17.0" prefWidth="148.0" text="STEADY STATE" />
+                  <GridPane fx:id="steady" layoutX="14.0" layoutY="223.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" fillWidth="false" layoutX="267.0" prefHeight="269.0" prefWidth="194.0" spacing="10.0">
+               <children>
+                  <Label layoutX="228.0" layoutY="25.0" prefHeight="17.0" prefWidth="82.0" text="NO. OF STEPS" />
+                  <TextField fx:id="noOfSteps" layoutX="234.0" layoutY="53.0" prefHeight="25.0" prefWidth="71.0" text="3" />
+                  <Label layoutX="228.0" layoutY="91.0" prefHeight="17.0" prefWidth="88.0" text="NO. OF STATES" />
+                  <TextField fx:id="noOfStates" layoutX="228.0" layoutY="116.0" prefHeight="25.0" prefWidth="71.0" text="2" />
+                  <Button fx:id="geneBut" layoutX="224.0" layoutY="194.0" mnemonicParsing="false" onAction="#genertateMatrix" text="Generate Matrix" />
+                    <Button fx:id="button" layoutX="239.0" layoutY="230.0" onAction="#handleButtonAction" text="SIMULATE" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
